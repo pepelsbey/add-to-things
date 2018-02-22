@@ -7,7 +7,9 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 		// format selection if it is not null
 		selection = selection ? "\n" + selection[0]: "";
 
-		var thingsURL = 'things:add?title=' + encodeURIComponent(tab.title) + '&notes=' + encodeURIComponent(tab.url + selection);
+		// Things 3.4 URL Scheme
+		// https://support.culturedcode.com/customer/en/portal/articles/2803573
+		var thingsURL = 'things:///add?show-quick-entry=true&title=' + encodeURIComponent(tab.title) + '&notes=' + encodeURIComponent(tab.url + selection);
   		chrome.tabs.update({ url: thingsURL });
 	});
 
