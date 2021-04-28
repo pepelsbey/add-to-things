@@ -25,5 +25,13 @@
 	"background": {
 		"scripts": ["background.js"],
 		"persistent": false
+	},
+	"commands": {
+  	"_execute_browser_action": {
+    	"suggested_key": {
+      	"default": "Ctrl+Alt+T"
+    	},
+  		"description": "Add to Things"
+  	}
 	}
 }
